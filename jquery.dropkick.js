@@ -539,7 +539,7 @@
       ;
       if ($opened && $eTarget.closest(".dk_container").length === 0 ) {
         closeDropdown($opened); // Improves performance by minimizing DOM Traversal Operations
-      } else if ($eTarget.is(".dk_toggle, .dk_label")) {
+      } else if ($eTarget.closest(".dk_toggle, .dk_label").length > 0) {
         $dk = $eTarget.parents('.dk_container').first();
 
         if ($dk.hasClass('dk_open')) {
